@@ -18,8 +18,28 @@ window.onscroll = handleScroll;
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
-
 //<!-- ------------------- Bottom to Top Scroll Button End -------------------->
+// Show "WhatsApp" button
+const whatsappBtn = document.getElementById("whatsappBtn");
+
+function handleScroll() {
+    // Show/hide WhatsApp button
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        whatsappBtn.classList.add("show");
+    } else {
+        whatsappBtn.classList.remove("show");
+    }
+}
+
+window.onscroll = handleScroll;
+
+// Open WhatsApp function
+function openWhatsApp() {
+    const phoneNumber = "+254710397911"; // Your WhatsApp number
+    const message = "Hello, I would like to inquire about the tour!"; // Default message
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+}
 // Owl Coarousel for Package Section
 $(document).ready(function () {
     $('.owl-package').owlCarousel({
