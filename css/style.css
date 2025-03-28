@@ -1387,8 +1387,8 @@ div.footer-bottom {
 #scrollTopBtn {
     position: fixed;
     bottom: 40px;
-    left: 20px;
-    display: none;
+    left: 30px;
+    display: inline-block;
     border: none !important;
     background: var(--theme-main);
     color: #fff;
