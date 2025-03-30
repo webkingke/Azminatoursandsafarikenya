@@ -1387,8 +1387,8 @@ div.footer-bottom {
 #scrollTopBtn {
     position: fixed;
     bottom: 40px;
-    left: 30px;
-    display: inline-block;
+    left: 20px;
+    display: inline;
     border: none !important;
     background: var(--theme-main);
     color: #fff;
@@ -1434,6 +1434,8 @@ div.footer-bottom {
 }
 
 /*----------------- WhatsApp Button Style End ------------------*/
+
+
 /*===================================Responsive Start==========================*/
 @media only screen and (max-width: 1281.5px) {
     .home-banner h1 {
@@ -1622,7 +1624,7 @@ div.footer-bottom {
     left: 42%;
 }
 .newsletter form {
-    width: 100%;
+    width: 90%;
 }
 }
 
@@ -1803,6 +1805,41 @@ footer::before {
 }
 }
 
+.enquiry-form-call {
+    display: inline-block; /* Ensure it's displayed */
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove any default link styles */
+}
+
+.enquiry-form-call svg {
+    width: 40px;
+    height: 40px;
+}
+
+/* Google Translate Button Styling */
+.translate-btn {
+    background: var(--theme-main);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.translate-btn:hover {
+    background: var(--theme-second);
+    color: #fff;
+}
+
+.translate-btn i {
+    font-size: 16px;
+}
 
 
 
