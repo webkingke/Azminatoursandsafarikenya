@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
         breakpoints: {
             1024: { slidesPerView: 4 },  // 2 slides on desktop
             768: { slidesPerView: 4 },   // 2 slides on tablet
-            480: { slidesPerView: 3 },   // 1 slide on mobile
+            480: { slidesPerView: 1 },   // 1 slide on mobile
         }
     });
 });
