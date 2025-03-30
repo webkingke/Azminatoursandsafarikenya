@@ -1,4 +1,5 @@
-<!DOCTYPE html><head>
+<!DOCTYPE html> 
+<html lang="it"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -10,14 +11,14 @@
     
     <meta property="og:title" content="Azmina Tours and Safaris Kenya - Best Safari Packages">
     <meta property="og:description" content="Book the ultimate African safari experience with Azmina Tours and Safaris. Discover Kenya’s breathtaking wildlife and scenic landscapes.">
-    <meta property="og:image" content="https://webkingke.github.io/Azminatoursandsafarikenya/images/welcome-bg">
-    <meta property="og:url" content="https://webkingke.github.io/Azminatoursandsafarikenya/">
+    <meta property="og:image" content="https://Azminatoursandsafarikenya.com/images/welcome-bg">
+    <meta property="og:url" content="https://Azminatoursandsafarikenya.com/">
     <meta property="og:type" content="website">
     
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="your-google-verification-code">
     
-    <link rel="canonical" href="https://webkingke.github.io/Azminatoursandsafarikenya/">
+    <link rel="canonical" href="https://Azminatoursandsafarikenya.com/">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/website-logo.png">
@@ -51,55 +52,22 @@
                                     <a class="nav-link" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#footer">contact us</a>
+                                    <a class="nav-link" href="#footer">Contact Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#package-section">package</a>
+                                    <a class="nav-link" href="#package-section">Package</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#featured-section">service</a>
+                                    <a class="nav-link" href="#featured-section">Service</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#section-title">know us</a>
+                                    <a class="nav-link" href="#section-title">Know Us</a>
                                 </li>
                             </ul>
                         </div>
-                        <!-- ------------ Mobile Menu Start ---------- -->
-                        <div class="mobile-menu d-flex d-lg-none">
-                            <a href="index.html">
-                                <img src="./images/website-logo.jpg" alt="" class="website-logo">
-                            </a>
-                            <a class="btn mobile-menu-icon" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                                <span class="navbar-toggler-icon"></span>
-                            </a>
-                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                                <div class="offcanvas-header">
-                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                </div>
-                                <div class="offcanvas-body">
-                                    <ul class="navbar-nav">
-                                        <li class="nav-item active">
-                                            <a class="nav-link" href="index.html">Home</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#footer">contact us</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#package-section">package</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#featured-section">service</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#section-title">know us</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ------------ Mobile Menu End ---------- -->
                     </nav>
                 </div>
+    
                 <div class="col-lg-3 col-md-6 top-header-right-col">
                     <div class="top-header-right">
                         <ul>
@@ -119,12 +87,51 @@
                                 </a>
                             </li>
                         </ul>
+                        
+                        <!-- Google Translate Button -->
+                        <div id="google_translate_element"></div>
+    
+                        <!-- Custom Translate Button -->
+                        <button onclick="translateToItalian()" class="translate-btn">🇮🇹 Translate to Italian</button>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <!-- --------- Header End ------- -->
+    
+    <!-- Google Translate Script -->
+    <script>
+        function loadGoogleTranslate() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    
+        function translateToItalian() {
+            var select = document.querySelector(".goog-te-combo");
+            if (select) {
+                select.value = "it"; // Set language to Italian
+                select.dispatchEvent(new Event("change")); // Trigger translation
+            }
+        }
+    </script>
+    
+    <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    
+    <style>
+        .translate-btn {
+            background-color: #f4f4f4;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+    
+        .translate-btn:hover {
+            background-color: #ddd;
+        }
+    </style>
+    
     <!-- ------------------- Body Section Start ------------------ -->
 <!-- ------------------- Body Section Start ------------------ -->
 <!-- --- Banner Section Start ----- -->
@@ -530,11 +537,11 @@
             </div>
             <div class="items">
                 <div class="package-box">
-                    <a href="#" class="package-box-img">
+                    <a href="#booking-form" class="package-box-img">
                         <img src="images/package-img-2.jpg" alt="">
                     </a>
                     <div class="package-content">
-                        <h5><a href="#">Full Immersion Watamu</a></h5>
+                        <h5><a href="#booking-form">Full Immersion Watamu</a></h5>
                         <p>Starting from <strong>$ 584</strong></p>
                         <a href="#booking-form" class="package-btn" data-package="Full Immersion Watamu">
                             <i class="fa-solid fa-arrow-right-long"></i>
@@ -545,11 +552,11 @@
             <div class="items">
                 <div class="package-box">
                     <span class="package-badge">Excursions</span>
-                    <a href="#" class="package-box-img">
+                    <a href="#booking-form" class="package-box-img">
                         <img src="images/package-img-3.jpg" alt="">
                     </a>
                     <div class="package-content">
-                        <h5><a href="#">Island of Love (Half Day)</a></h5>
+                        <h5><a href="#booking-form">Island of Love (Half Day)</a></h5>
                         <p>Starting from <strong>$ 1036</strong></p>
                         <a href="#booking-form" class="package-btn" data-package="Island of Love (Half Day)">
                             <i class="fa-solid fa-arrow-right-long"></i>
@@ -560,12 +567,12 @@
             <div class="items">
                 <div class="package-box">
                     <span class="package-badge">Group Safari</span>
-                    <a href="#" class="package-box-img">
+                    <a href="#booking-form" class="package-box-img">
                         <img src="images/package-img-4.jpg" alt="">
                     </a>
                     <div class="package-content">
-                        <h5><a href="#">Safari INSIDE (Tsavo East, Amboseli)</a></h5>
-                        <p>Starting from <strong>$ 640</strong></p>
+                        <h5><a href="#booking-form">Safari INSIDE (Tsavo East, Amboseli)</a></h5>
+                        <p>Starting from <strong></strong></p>
                         <a href="#booking-form" class="package-btn" data-package="Safari INSIDE (Tsavo East, Amboseli)">
                             <i class="fa-solid fa-arrow-right-long"></i>
                         </a>
@@ -574,11 +581,11 @@
             </div>
             <div class="items">
                 <div class="package-box">
-                    <a href="#" class="package-box-img">
+                    <a href="#booking-form" class="package-box-img">
                         <img src="images/package-img-5.jpg" alt="">
                     </a>
                     <div class="package-content">
-                        <h5><a href="#">10 Days Between Savannah and Ocean</a></h5>
+                        <h5><a href="#booking-form">10 Days Between Savannah and Ocean</a></h5>
                         <p>Starting from <strong>$ 3500</strong></p>
                         <a href="#booking-form" class="package-btn" data-package="10 Days Between Savannah and Ocean">
                             <i class="fa-solid fa-arrow-right-long"></i>
@@ -862,11 +869,12 @@
 </footer>
 <!-- ------ Footer End ------ -->
 
-<!-- Bottom to Top Scroll Button and WhatsApp Button -->
+<!-- Bottom to Top Scroll Button, WhatsApp Button, and Language Change Button -->
 <button onclick="scrollToTop()" id="scrollTopBtn"><i class="fa-solid fa-arrow-up-long"></i></button>
 <button onclick="openWhatsApp()" id="whatsappBtn">
     <i class="fa-brands fa-whatsapp"></i>
 </button>
+<button onclick="toggleLanguage()" id="languageBtn">🌍 Change Language</button>
 
 <!-- Scripts -->
 <script src="js/popper.min.js"></script>
@@ -884,3 +892,4 @@
         height: auto;   /* Maintain aspect ratio */
     }
 </style>
+</html>
