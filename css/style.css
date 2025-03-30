@@ -223,6 +223,11 @@ header {
     max-width: 100px;
 }
 
+.small-logo {
+    width: 150px;  /* Adjust the width */
+    height: auto;   /* Maintain aspect ratio */
+}
+
 .top-header-right {
     text-align: right;
 }
@@ -320,7 +325,7 @@ header {
 /* ------ Banner Section --------- */
 .home-banner {
     position: relative;
-    height: 750px;
+    height: 730px;
     overflow: hidden;
     background: url(../images/banner-img-2.jpg);
     background-repeat: no-repeat;
@@ -1435,6 +1440,46 @@ div.footer-bottom {
 
 /*----------------- WhatsApp Button Style End ------------------*/
 
+/* Centering the Language Button */
+#languageBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--theme-main);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.59);
+    transition: background-color 0.8s ease;
+    z-index: 9;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+#languageBtn:hover {
+    background: var(--theme-second);
+}
+
+/* Centering the Google Translate Box */
+#google_translate_container {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--theme-main);
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    z-index: 9;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+
+
 
 /*===================================Responsive Start==========================*/
 @media only screen and (max-width: 1281.5px) {
@@ -1613,6 +1658,18 @@ div.footer-bottom {
     height: 600px;
     width: 100%;
     object-fit: cover;
+    border-radius: 1000px;  /* Rounded corners */
+    border: 5px solid #ff9800;  /* Stylish orange border */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);  /* Soft shadow effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect to make it interactive */
+.testimonial-right-img img:hover {
+    transform: scale(1.02);  /* Slight zoom on hover */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4);
+}
+
 }
 .owl-testimonial button.owl-prev {
     left: 0;
@@ -1626,7 +1683,7 @@ div.footer-bottom {
 .newsletter form {
     width: 90%;
 }
-}
+
 
 @media only screen and (max-width: 767.5px) {
     .plr-60 {
@@ -1804,43 +1861,218 @@ footer::before {
     background: #000000bd;
 }
 }
-
-.enquiry-form-call {
-    display: inline-block; /* Ensure it's displayed */
-    color: #fff; /* Text color */
-    text-decoration: none; /* Remove any default link styles */
+/* --- Booking Form Styling --- */
+.booking-form {
+    background: #f9f9f9; /* Light gray background */
+    padding: 60px 20px;
 }
 
-.enquiry-form-call svg {
-    width: 40px;
-    height: 40px;
+.booking-form .container {
+    max-width: 800px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Google Translate Button Styling */
-.translate-btn {
-    background: var(--theme-main);
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    font-size: 14px;
+.section-title h5.sub-title {
+    font-size: 18px;
+    color: var(--theme-main); /* Coral color */
     font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.translate-btn:hover {
-    background: var(--theme-second);
-    color: #fff;
+.section-title h2.primary-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.translate-btn i {
+/* --- Form Elements --- */
+.booking-form form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 100px;
+}
+
+.booking-form label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.booking-form .form-control {
+    border: 2px solid #ddd;
+    padding: 12px;
     font-size: 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
+.booking-form .form-control:focus {
+    border-color: var(--theme-main);
+    box-shadow: 0px 0px 8px rgba(15, 4, 1, 0.53);
+    outline: none;
+}
+
+/* --- Submit Button --- */
+.booking-form .btn-primary {
+    background: var(--theme-main);
+    border: none;
+    padding: 14px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 8px;
+    transition: 0.8s ease;
+}
+
+.booking-form .btn-primary:hover {
+    background: var;
+}
+
+/* --- Responsive Styling --- */
+@media (max-width: 768px) {
+    .booking-form .container {
+        padding: 30px;
+    }
+
+    .section-title h2.primary-title {
+        font-size: 26px;
+    }
+
+    .booking-form .btn-primary {
+        width: 100%;
+    }
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 50%;  /* Adjust width to fit nicely */
+    max-width: 260px; /* Limit maximum width */
+    height: 30px;  /* Set a fixed height */
+    object-fit: cover; /* Ensures the image scales well */
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out;
+}
+
+.swiper-slide:hover img {
+    transform: scale(1.05);
+}
+.gallery-section {
+    padding: 50px 0;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.gallery-slider {
+    position: relative;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0px 5px 15px rgba(65, 4, 179, 0.2);
+}
+
+/* Navigation Buttons */
+.swiper-button-next, .swiper-button-prev {
+    color: #190eb1;
+    background: rgba(204, 10, 10, 0.5);
+    padding: 20px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background: var(--theme-second);
+}
+
+/* Pagination */
+.swiper-pagination-bullet {
+    background: var(--theme-main) !important;
+}
+
+/* General Thank You Page Styles */
+.thank-you-newsletter, .thank-you-booking, .thank-you-inquiry {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.thank-you-newsletter h2, .thank-you-booking h2, .thank-you-inquiry h2 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: fadeIn 1s ease-out;
+}
+
+.thank-you-newsletter p, .thank-you-booking p, .thank-you-inquiry p {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Back Home Button Styling */
+.back-home-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s ease;
+    border: 2px solid #007bff;
+    font-weight: 600;
+}
+
+/* Button Hover Effect */
+.back-home-btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Animation for Text Appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .thank-you-newsletter h2, .thank-you-booking h2, .thank-you-inquiry h2 {
+        font-size: 28px;
+    }
+    .back-home-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
 
 
 /*===================================Responsive End==========================*/
