@@ -18,28 +18,20 @@ window.onscroll = handleScroll;
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
-//<!-- ------------------- Bottom to Top Scroll Button End -------------------->
-// Show "WhatsApp" button
-const whatsappBtn = document.getElementById("whatsappBtn");
 
-function handleScroll() {
-    // Show/hide WhatsApp button
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        whatsappBtn.classList.add("show");
+//<!-- ------------------- Bottom to Top Scroll Button End -------------------->
+
+function toggleLanguage() {
+    const currentLang = document.documentElement.lang;
+    if (currentLang === "en") {
+        document.documentElement.lang = "sw";
+        alert("Lugha imebadilishwa kuwa Kiswahili.");
     } else {
-        whatsappBtn.classList.remove("show");
+        document.documentElement.lang = "en";
+        alert("Language switched to English.");
     }
 }
 
-window.onscroll = handleScroll;
-
-// Open WhatsApp function
-function openWhatsApp() {
-    const phoneNumber = "+254710397911"; // Your WhatsApp number
-    const message = "Hello, I would like to inquire about the tour!"; // Default message
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
-}
 // Owl Coarousel for Package Section
 $(document).ready(function () {
     $('.owl-package').owlCarousel({
@@ -115,3 +107,31 @@ function isElementInViewport(el) {
     let rect = el.getBoundingClientRect();
     return rect.top <= window.innerHeight && rect.bottom >= 0;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper(".gallery-slider", {
+        slidesPerView: 4,  // Show 2 images at a time
+        spaceBetween: 10,  // Gap between slides
+        loop: true,
+        autoplay: {
+            delay: 2500,  // Auto-slide every 2.5 seconds
+            disableOnInteraction: false,  // Continue sliding after user interaction
+        },
+        speed: 800,  // Smooth transition speed
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            1024: { slidesPerView: 4 },  // 2 slides on desktop
+            768: { slidesPerView: 4 },   // 2 slides on tablet
+            480: { slidesPerView: 3 },   // 1 slide on mobile
+        }
+    });
+});
+
+
