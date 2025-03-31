@@ -110,8 +110,8 @@ function isElementInViewport(el) {
 
 document.addEventListener("DOMContentLoaded", function () {
     var swiper = new Swiper(".gallery-slider", {
-        slidesPerView: 4,  // Show 2 images at a time
-        spaceBetween: 10,  // Gap between slides
+        slidesPerView: 2,  // Show 2 images at a time
+        spaceBetween: 5,  // Gap between slides
         loop: true,
         autoplay: {
             delay: 2500,  // Auto-slide every 2.5 seconds
@@ -127,8 +127,8 @@ document.addEventListener("DOMContentLoaded", function () {
             clickable: true,
         },
         breakpoints: {
-            1024: { slidesPerView: 4 },  // 2 slides on desktop
-            768: { slidesPerView: 4 },   // 2 slides on tablet
+            1024: { slidesPerView: 3 },  // 2 slides on desktop
+            768: { slidesPerView: 2 },   // 2 slides on tablet
             480: { slidesPerView: 1 },   // 1 slide on mobile
         }
     });
